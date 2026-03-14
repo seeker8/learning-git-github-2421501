@@ -1,0 +1,17 @@
+name: 03 - Workflow Runners
+run-name: Runners example
+
+on: workflow_dispatch
+
+jobs:
+  ubuntu-echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo This job is running on a ${{ runner.os }} runner.
+
+  windows-echo:
+    runs-on: windows-latest
+    steps:
+      - run: |
+          echo This job is running on a ${{ runner.os }} runner.
